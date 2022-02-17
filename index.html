@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="vue-app" class="container">
+        <h4>Weather Web App</h4>
+        <input type="text" name="" id="" v-model="currentCity" placeholder="Enter city...">
+        <input type="button" value="Add" v-on:click="addCity" class="btn-info"><br><br>
+
+        <div class="card-deck">
+            <div v-for="city in cities">
+                <eachdata v-bind:c="city"></eachdata>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
