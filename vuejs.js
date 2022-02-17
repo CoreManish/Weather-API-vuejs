@@ -1,4 +1,3 @@
-
     const app = new Vue({
         el: "#vue-app",
         data: {
@@ -22,7 +21,7 @@
 
                 //start fetching data
                 root_url = "https://api.openweathermap.org/data/2.5/weather"
-                apikey = "e61469653abb0703f20ef330594a9879"
+                apikey = "your api key"
                 full_url = root_url + "?q=" + this.currentCity + "&appid=" + apikey
                 fetchPromiseResolved = await fetch(full_url)
                 //console.log(fetchPromiseResolved.status)
@@ -94,7 +93,7 @@
                     update: async function () {
                         //start fetching data
                         root_url = "https://api.openweathermap.org/data/2.5/weather"
-                        apikey = "e61469653abb0703f20ef330594a9879"
+                        apikey = "Your API key"
                         full_url = root_url + "?q=" + this.c.cityname + "&appid=" + apikey
                         fetchPromiseResolved = await fetch(full_url)
                         //get data in javascript object format
