@@ -2,25 +2,52 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Simulation</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        .eachdata {
+            margin-bottom: 15px;
+        }
+
+        body {
+            background-image: url('./back.jpg');
+            height: 100vh;
+        }
+
+        .card {
+            margin: 0 auto;
+            /* Added */
+            float: none;
+            /* Added */
+            margin-bottom: 10px;
+            /* Added */
+        }
+
+        .card-deck {
+            margin: 0 auto;
+        }
+    </style>
 </head>
 
-<body>
-    <div id="vue-app" class="container">
-        <h4>Weather Web App</h4>
+<body class="bg-image">
+    <div id="vue-app" class="">
+        <h4 class="p-3 mb-2 bg-warning text-white text-center">Weather Web App</h4>
         <input type="text" name="" id="" v-model="currentCity" placeholder="Enter city...">
         <input type="button" value="Add" v-on:click="addCity" class="btn-info"><br><br>
 
         <div class="card-deck">
-            <div v-for="city in cities">
+            <div v-for="city in cities" class="eachdata">
                 <eachdata v-bind:c="city"></eachdata>
             </div>
         </div>
     </div>
 
 </body>
-    <script src="./vuejs.js"></script>
+<script src="./script.js"></script>
 
 </html>
