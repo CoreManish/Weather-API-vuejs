@@ -21,7 +21,7 @@ const app = new Vue({
 
             //start fetching data
             root_url = "https://api.openweathermap.org/data/2.5/weather"
-            apikey = "e61469653abb0703f20ef330594a9879"
+            apikey = "your own api key"
             full_url = root_url + "?q=" + this.currentCity + "&appid=" + apikey
             fetchPromiseResolved = await fetch(full_url)
             //console.log(fetchPromiseResolved.status)
